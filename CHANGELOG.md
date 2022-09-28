@@ -6,4 +6,5 @@
 - Random case swapping transformer
 - Random comment rewriting transformer
 - Random comment removing transformer
+- Random number encoding transformer
 - Random fuzzer
