@@ -2,5 +2,7 @@
 
 ## [Unreleased]
 ### Added
-- Space transformer
+- Random space substitution transformer
+- Random case swapping transformer
+- Random comment rewriting transformer
 - Random fuzzer
