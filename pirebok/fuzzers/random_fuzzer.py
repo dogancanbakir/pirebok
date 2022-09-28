@@ -1,8 +1,8 @@
 import random
 from typing import List
 
-from pirebok.fuzzers.fuzzer import Fuzzer
-from pirebok.transformers.transformer import Transformer
+from pirebok.fuzzers import Fuzzer
+from pirebok.transformers import Transformer
 
 
 class RandomFuzzer(Fuzzer):
