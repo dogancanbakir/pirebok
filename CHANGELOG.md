@@ -7,4 +7,5 @@
 - Random comment rewriting transformer
 - Random comment removing transformer
 - Random number encoding transformer
+- Add CLI support
 - Random fuzzer

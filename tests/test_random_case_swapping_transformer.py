@@ -1,7 +1,6 @@
 import pytest
 
-from pirebok.transformers.random_case_swapping_transformer import RandomCaseSwappingTransformer
-from pirebok.transformers.transformer import Transformer
+from pirebok.transformers import RandomCaseSwappingTransformer, Transformer
 
 
 @pytest.fixture

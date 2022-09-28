@@ -1,7 +1,6 @@
 import pytest
 
-from pirebok.transformers.random_number_encoding_transformer import RandomNumberEncodingTransformer
-from pirebok.transformers.transformer import Transformer
+from pirebok.transformers import RandomNumberEncodingTransformer, Transformer
 
 
 @pytest.fixture

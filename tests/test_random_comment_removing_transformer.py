@@ -1,7 +1,6 @@
 import pytest
 
-from pirebok.transformers.random_comment_removing_transformer import RandomCommentRemovingTransformer
-from pirebok.transformers.transformer import Transformer
+from pirebok.transformers import RandomCommentRemovingTransformer, Transformer
 
 
 @pytest.fixture

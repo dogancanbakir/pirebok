@@ -1,7 +1,6 @@
 import pytest
 
-from pirebok.transformers.random_space_substitution_transformer import RandomSpaceSubstitutionTransformer
-from pirebok.transformers.transformer import Transformer
+from pirebok.transformers import RandomSpaceSubstitutionTransformer, Transformer
 
 
 @pytest.fixture
