@@ -1,5 +1,6 @@
 import random
 import re
+from typing import Dict, List
 
 
 def replace_random(candidate: str, sub: str, wanted: str) -> str:
@@ -17,5 +18,5 @@ def replace_random(candidate: str, sub: str, wanted: str) -> str:
     return result
 
 
-def filter_candidates(symbols: dict, payload: str) -> list[str]:
+def filter_candidates(symbols: Dict, payload: str) -> List[str]:
     return [s for s in symbols.keys() if s in payload]
