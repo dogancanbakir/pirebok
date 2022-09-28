@@ -1,12 +1,12 @@
 import pytest
 
-from pirebok.transformers.random_case_transformer import RandomCaseTransformer
+from pirebok.transformers.random_case_swapping_transformer import RandomCaseSwappingTransformer
 from pirebok.transformers.transformer import Transformer
 
 
 @pytest.fixture
 def transformer() -> Transformer:
-    return RandomCaseTransformer()
+    return RandomCaseSwappingTransformer()
 
 
 def test_mutation(transformer: Transformer) -> None:

@@ -5,7 +5,7 @@ from pirebok.transformers.transformer import Transformer
 from pirebok.transformers.utils import filter_candidates, replace_random
 
 
-class SpaceTransformer(Transformer):
+class RandomSpaceSubstitutionTransformer(Transformer):
     def __init__(self) -> None:
         self.symbols = {
             " ": [
