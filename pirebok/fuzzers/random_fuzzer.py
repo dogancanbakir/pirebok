@@ -1,15 +1,14 @@
 import random
-from typing import List
+from typing import Set
 
 from pirebok.fuzzers import Fuzzer
-from pirebok.transformers import Transformer
 
 
 class RandomFuzzer(Fuzzer):
-    def __init__(self, transformers: List[Transformer]) -> None:
-        self.transformers = transformers
+    def fuzz(self, payload: str, epoch: int, batch_size: int) -> Set[str]:
+        payloads = set()
+        for _ in range(epoch):
+            for _ in range(batch_size):
+                payloads.add(random.choice(self.transformers).transform(payload))
 
-    def fuzz(self, payload: str) -> str:
-        transformer = random.choice(self.transformers)
-        payload = transformer.transform(payload)
-        return payload
+        return payloads
