@@ -1,10 +1,12 @@
 import random
 import re
 
-from pirebok.transformers.transformer import Transformer
+from pirebok.transformers.generic_transformer import GenericTransformer
+
+# TODO: how about random char encoding?
 
 
-class RandomNumberEncodingTransformer(Transformer):
+class RandomNumberEncodingTransformer(GenericTransformer):
     def transform(self, payload: str) -> str:
         candidates = list(re.finditer(r'(?<=[^\'"\d\wx])\d+(?=[^\'"\d\wx])', payload))
 
