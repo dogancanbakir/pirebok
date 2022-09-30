@@ -1,11 +1,13 @@
 import random
 import uuid
 
-from pirebok.transformers.transformer import Transformer
+from pirebok.transformers.generic_transformer import GenericTransformer
 from pirebok.transformers.utils import filter_candidates, replace_random
 
+# TODO: make this more generic
 
-class RandomSpaceSubstitutionTransformer(Transformer):
+
+class RandomSpaceSubstitutionTransformer(GenericTransformer):
     def __init__(self) -> None:
         self.symbols = {
             " ": [

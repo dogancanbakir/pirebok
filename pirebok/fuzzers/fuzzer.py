@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
-from typing import List, Set
+from typing import Sequence, Set
 
 from pirebok.transformers import Transformer
 
 
 class Fuzzer(ABC):
-    def __init__(self, transformers: List[Transformer]) -> None:
+    def __init__(self, transformers: Sequence[Transformer]) -> None:
         self.transformers = transformers
 
     @abstractmethod
