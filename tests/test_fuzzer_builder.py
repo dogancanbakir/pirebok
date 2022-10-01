@@ -1,6 +1,6 @@
 import pytest
 
-from pirebok.fuzzers import FuzzerBuilder, RandomFuzzer
+from pirebok.fuzzers import FuzzerBuilder, RandomGenericFuzzer
 
 
 @pytest.fixture
@@ -9,8 +9,8 @@ def builder() -> FuzzerBuilder:
 
 
 def test_creation(builder: FuzzerBuilder) -> None:
-    fuzzer_name = "RandomFuzzer"
+    fuzzer_name = "RandomGenericFuzzer"
 
     fuzzer = builder.choice(fuzzer_name).build()
 
-    assert isinstance(fuzzer, RandomFuzzer)
+    assert isinstance(fuzzer, RandomGenericFuzzer)

@@ -11,3 +11,7 @@ class Fuzzer(ABC):
     @abstractmethod
     def fuzz(self, payload: str, epoch: int, batch_size: int) -> Set[str]:
         pass
+
+    @abstractmethod
+    def accept(self, visitor) -> None:
+        visitor.visit_generic(self)
