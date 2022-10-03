@@ -33,9 +33,8 @@ def random_char(spaces: int = True):
     return random.choice(chars if spaces else chars_no_space)
 
 
-def tautology():
+def string_tautology():
     value_s = random_string(random.randint(1, 5))
-    value_n = random.randint(1, 10000)
     tautologies = [
         # Strings - equals
         f"'{value_s}'='{value_s}'",
@@ -49,6 +48,14 @@ def tautology():
         f'"{value_s}"!="{value_s + random_string(1, spaces=False)}"',
         f'"{value_s}"<>"{value_s + random_string(1, spaces=False)}"',
         f'"{value_s}" NOT LIKE "{value_s + random_string(1, spaces=False)}"',
+    ]
+
+    return random.choice(tautologies)
+
+
+def number_tautology():
+    value_n = random.randint(1, 10000)
+    tautologies = [
         # Numbers - equal
         f"{value_n}={value_n}",
         f"{value_n} LIKE {value_n}",
@@ -60,3 +67,39 @@ def tautology():
     ]
 
     return random.choice(tautologies)
+
+
+def string_contradiction():
+    value_s = random_string(random.randint(1, 5))
+    contradictions = [
+        # Strings - equals
+        f"'{value_s}'='{value_s + random_string(1, spaces=False)}'",
+        f"'{value_s}' LIKE '{value_s + random_string(1, spaces=False)}'",
+        f'"{value_s}"="{value_s + random_string(1, spaces=False)}"',
+        f'"{value_s}" LIKE "{value_s + random_string(1, spaces=False)}"',
+        # Strings - not equal
+        f"'{value_s}'!='{value_s}'",
+        f"'{value_s}'<>'{value_s}'",
+        f"'{value_s}' NOT LIKE '{value_s}'",
+        f'"{value_s}"!="{value_s}"',
+        f'"{value_s}"<>"{value_s}"',
+        f'"{value_s}" NOT LIKE "{value_s}"',
+    ]
+    return random.choice(contradictions)
+
+
+def number_contradiction():
+    value_n = random.randint(1, 10000)
+
+    contradictions = [
+        # Numbers - equal
+        f"{value_n}={value_n + 1}",
+        f"{value_n} LIKE {value_n + 1}",
+        # Numbers - not equal
+        f"{value_n}!={value_n}",
+        f"{value_n}<>{value_n}",
+        f"{value_n} NOT LIKE {value_n}",
+        f"{value_n} NOT IN ({value_n - 1},{value_n},{value_n + 1})",
+    ]
+
+    return random.choice(contradictions)
