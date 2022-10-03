@@ -2,8 +2,7 @@ from __future__ import annotations
 
 from typing import List, Type
 
-from pirebok.fuzzers import Fuzzer
-from pirebok.fuzzers.fuzzer_transformer_resolver_visitor import FuzzerTransformerResolverVisitor
+from pirebok.fuzzers import Fuzzer, FuzzerTransformerResolverVisitor
 
 
 class FuzzerBuilder:
