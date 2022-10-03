@@ -5,5 +5,6 @@ from .generic.random_number_encoding_transformer import RandomNumberEncodingTran
 from .generic.random_space_substitution_transformer import RandomSpaceSubstitutionTransformer
 from .generic_transformer import GenericTransformer
 from .sql.random_keyword_swapping_transformer import RandomKeywordSwappingTransformer
+from .sql.random_tautology_swapping_transofmer import RandomTautologySwappingTransformer
 from .sql_transformer import SqlTransformer
 from .transformer import Transformer

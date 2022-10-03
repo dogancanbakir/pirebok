@@ -1,7 +1,8 @@
 import random
 from typing import Set
 
-from pirebok.fuzzers import FuzzerVisitor, SqlFuzzer
+from pirebok.fuzzers.fuzzer_visitor import FuzzerVisitor
+from pirebok.fuzzers.sql_fuzzer import SqlFuzzer
 
 
 class RandomSqlFuzzer(SqlFuzzer):

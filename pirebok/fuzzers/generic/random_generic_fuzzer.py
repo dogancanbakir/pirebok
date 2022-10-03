@@ -1,8 +1,8 @@
 import random
 from typing import Set
 
-from pirebok.fuzzers import GenericFuzzer
 from pirebok.fuzzers.fuzzer_visitor import FuzzerVisitor
+from pirebok.fuzzers.generic_fuzzer import GenericFuzzer
 
 
 class RandomGenericFuzzer(GenericFuzzer):
