@@ -1,8 +1,6 @@
 import random
 from typing import Set
 
-from tqdm.auto import trange
-
 from pirebok.fuzzers.fuzzer_visitor import FuzzerVisitor
 from pirebok.fuzzers.sql_fuzzer import SqlFuzzer
 
@@ -11,8 +9,8 @@ class RandomSqlFuzzer(SqlFuzzer):
     def fuzz(self, payload: str, epoch: int, batch_size: int) -> Set[str]:
         payloads = set()
         payload_buff = payload
-        for _ in trange(epoch, desc="Epoch"):
-            for _ in trange(batch_size, desc="Batch", leave=False):
+        for _ in range(epoch):
+            for _ in range(batch_size):
                 payload_buff = random.choice(self.transformers).transform(payload)
                 payloads.add(payload_buff)
 
