@@ -1,7 +1,6 @@
 import click
 
-from pirebok.fuzzers import FuzzerBuilder
-from pirebok.fuzzers.fuzzer import Fuzzer
+from pirebok.fuzzers import Fuzzer, FuzzerBuilder
 
 
 @click.command(no_args_is_help=True)

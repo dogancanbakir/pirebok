@@ -2,7 +2,9 @@ from functools import reduce
 from operator import iconcat
 from typing import Sequence
 
-from pirebok.fuzzers import FuzzerVisitor, GenericFuzzer, SqlFuzzer
+from pirebok.fuzzers.fuzzer_visitor import FuzzerVisitor
+from pirebok.fuzzers.generic_fuzzer import GenericFuzzer
+from pirebok.fuzzers.sql_fuzzer import SqlFuzzer
 from pirebok.transformers import GenericTransformer, SqlTransformer, Transformer
 
 
