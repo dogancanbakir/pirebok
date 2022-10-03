@@ -4,5 +4,6 @@ from .fuzzer_transformer_resolver_visitor import FuzzerTransformerResolverVisito
 from .fuzzer_visitor import FuzzerVisitor
 from .generic.random_generic_fuzzer import RandomGenericFuzzer
 from .generic_fuzzer import GenericFuzzer
+from .sql.guided_random_sql_fuzzer import GuidedRandomSqlFuzzer
 from .sql.random_sql_fuzzer import RandomSqlFuzzer
 from .sql_fuzzer import SqlFuzzer
