@@ -2,7 +2,7 @@ import random
 import re
 
 from pirebok.transformers.sql_transformer import SqlTransformer
-from pirebok.transformers.utils import tautology
+from pirebok.transformers.utils import number_tautology, string_tautology
 
 
 class RandomTautologySwappingTransformer(SqlTransformer):
@@ -13,7 +13,7 @@ class RandomTautologySwappingTransformer(SqlTransformer):
 
         candidate = random.choice(results)
 
-        replacements = tautology()
+        replacements = [string_tautology(), number_tautology()]
         replacement = random.choice(replacements)
         new_payload = payload[: candidate.span()[0]] + replacement + payload[candidate.span()[1] :]
         return new_payload
