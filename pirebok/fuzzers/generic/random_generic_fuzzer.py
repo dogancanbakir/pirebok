@@ -8,9 +8,11 @@ from pirebok.fuzzers.generic_fuzzer import GenericFuzzer
 class RandomGenericFuzzer(GenericFuzzer):
     def fuzz(self, payload: str, epoch: int, batch_size: int) -> Set[str]:
         payloads = set()
+        payload_buff = payload
         for _ in range(epoch):
             for _ in range(batch_size):
-                payloads.add(random.choice(self.transformers).transform(payload))
+                payload_buff = random.choice(self.transformers).transform(payload)
+                payloads.add(payload_buff)
 
         return payloads
 
