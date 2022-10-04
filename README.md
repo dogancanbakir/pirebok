@@ -1,4 +1,4 @@
-# pirebok
+# pirebok - an adversarial fuzzer
 
 
 [![pypi](https://img.shields.io/pypi/v/pirebok.svg)](https://pypi.org/project/pirebok/)
@@ -8,9 +8,6 @@
 
 
 
-payload fuzzer
-
-
 * Documentation: <https://dogancanbakir.github.io/pirebok>
 * GitHub: <https://github.com/dogancanbakir/pirebok>
 * PyPI: <https://pypi.org/project/pirebok/>
@@ -18,9 +15,12 @@ payload fuzzer
 
 
 ## Features
-
-* TODO
+- Random generic fuzzer w/ multiple transformers
+- Random sql fuzzer w/ multiple transformers
+- Guided random sql fuzzer w/ multiple transformers and [metamaska](https://github.com/dogancanbakir/metamaska)
 
 ## Credits
 - [Cookiecutter](https://github.com/audreyr/cookiecutter)
 - [waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage)
+- [ML-based-WAF](https://github.com/vladan-stojnic/ML-based-WAF)
+- [WAF-A-MoLE](https://github.com/AvalZ/WAF-A-MoLE)

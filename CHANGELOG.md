@@ -1,7 +1,8 @@
 # Changelog
 
-## [Unreleased]
+## [0.1.0] - 2022-10-04
 ### Added
+- Initial release on PyPI.
 - Random space substitution transformer
 - Random case swapping transformer
 - Random comment rewriting transformer
@@ -14,3 +15,6 @@
 - Random sql fuzzer
 - Guided random sql fuzzer
 - Add CLI support
+
+
+## [Unreleased]
