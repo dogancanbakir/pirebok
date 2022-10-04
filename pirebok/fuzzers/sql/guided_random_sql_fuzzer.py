@@ -1,5 +1,4 @@
 import random
-from typing import Set
 
 from metamaska.metamaska import Metamaska
 
@@ -8,17 +7,12 @@ from pirebok.fuzzers.sql_fuzzer import SqlFuzzer
 
 
 class GuidedRandomSqlFuzzer(SqlFuzzer):
-    def fuzz(self, payload: str, epoch: int, batch_size: int) -> Set[str]:
+    def fuzz(self, payload: str) -> str:
         metamask = Metamaska()
-        payloads = set()
-        payload_buff = payload
-        for _ in range(epoch):
-            for _ in range(batch_size):
-                payload_buff = random.choice(self.transformers).transform(payload_buff)
-                if metamask.form(payload_buff) == "valid":
-                    payloads.add(payload_buff)
-
-        return payloads
+        payload_buff = random.choice(self.transformers).transform(payload)
+        if metamask.form(payload_buff) == "valid":
+            return payload_buff
+        return payload
 
     def accept(self, visitor: FuzzerVisitor) -> None:
         visitor.visit_sql(self)

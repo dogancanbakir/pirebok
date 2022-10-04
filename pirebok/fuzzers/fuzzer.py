@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Sequence, Set
+from typing import Sequence
 
 from pirebok.transformers import Transformer
 
@@ -9,7 +9,7 @@ class Fuzzer(ABC):
         self.transformers = transformers
 
     @abstractmethod
-    def fuzz(self, payload: str, epoch: int, batch_size: int) -> Set[str]:
+    def fuzz(self, payload: str) -> str:
         pass
 
     @abstractmethod
