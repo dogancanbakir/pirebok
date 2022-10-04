@@ -11,7 +11,7 @@ class FuzzerBuilder:
         self.fuzzer: Fuzzer
 
     def _fuzzers(self) -> List[Type[Fuzzer]]:
-        return [ff for f in Fuzzer.__subclasses__() for ff in f.__subclasses__()]  # type: ignore
+        return list(map(lambda x: x.__subclasses__(), Fuzzer.__subclasses__()))  # type: ignore
 
     def _get_fuzzer(self, name: str) -> Fuzzer:
         fuzzer = next(fuzzer([]) for fuzzer in self._fuzzers() if (name and name.lower()) == fuzzer.__name__.lower())
