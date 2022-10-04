@@ -11,7 +11,7 @@ class RandomSqlFuzzer(SqlFuzzer):
         payload_buff = payload
         for _ in range(epoch):
             for _ in range(batch_size):
-                payload_buff = random.choice(self.transformers).transform(payload)
+                payload_buff = random.choice(self.transformers).transform(payload_buff)
                 payloads.add(payload_buff)
 
         return payloads
