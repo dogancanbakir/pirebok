@@ -1,3 +1,6 @@
+from functools import reduce
+from operator import iconcat
+
 import click
 from tqdm.auto import trange
 
@@ -10,7 +13,8 @@ from pirebok.fuzzers import Fuzzer, FuzzerBuilder
     '--fuzzer',
     required=True,
     type=click.Choice(
-        [ff.__name__ for f in Fuzzer.__subclasses__() for ff in f.__subclasses__()], case_sensitive=False
+        map(lambda x: x.__name__, reduce(iconcat, map(lambda x: x.__subclasses__(), Fuzzer.__subclasses__()))),
+        case_sensitive=False,
     ),
     help="choose fuzzer",
 )

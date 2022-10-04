@@ -5,7 +5,7 @@ from typing import Dict, List
 
 
 def replace_random(candidate: str, sub: str, wanted: str) -> str:
-    occurrences = [m.start() for m in re.finditer(re.escape(sub), candidate)]
+    occurrences = list(map(lambda x: x.start(), re.finditer(re.escape(sub), candidate)))
     if not occurrences:
         return candidate
 
@@ -20,20 +20,20 @@ def replace_random(candidate: str, sub: str, wanted: str) -> str:
 
 
 def filter_candidates(symbols: Dict, payload: str) -> List[str]:
-    return [s for s in symbols.keys() if s in payload]
+    return list(filter(lambda x: x in payload, symbols.keys()))
 
 
-def random_string(max_len: int = 5, spaces: bool = True):
-    return "".join([random_char(spaces=spaces) for i in range(random.randint(1, max_len))])
+def random_string(max_len: int = 5, spaces: bool = True) -> str:
+    return "".join(map(lambda _: random_char(spaces), range(random.randint(1, max_len))))
 
 
-def random_char(spaces: int = True):
+def random_char(spaces: bool = True) -> str:
     chars = list(string.printable)
-    chars_no_space = [c for c in chars if c not in string.whitespace]
+    chars_no_space = list(filter(lambda x: x not in string.whitespace, chars))
     return random.choice(chars if spaces else chars_no_space)
 
 
-def string_tautology():
+def string_tautology() -> str:
     value_s = random_string(random.randint(1, 5))
     tautologies = [
         # Strings - equals
@@ -69,7 +69,7 @@ def number_tautology():
     return random.choice(tautologies)
 
 
-def string_contradiction():
+def string_contradiction() -> str:
     value_s = random_string(random.randint(1, 5))
     contradictions = [
         # Strings - equals
