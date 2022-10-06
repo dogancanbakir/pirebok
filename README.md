@@ -1,4 +1,4 @@
-# pirebok - an adversarial fuzzer
+# pîrebok (from Kurdish "witch") - a guided adversarial fuzzer
 
 
 [![pypi](https://img.shields.io/pypi/v/pirebok.svg)](https://pypi.org/project/pirebok/)
