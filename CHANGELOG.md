@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.2.0] - 2022-10-06
+### Added
+- Add threshold for the guided fuzzers
+
 ## [0.1.0] - 2022-10-04
 ### Added
 - Initial release on PyPI.
