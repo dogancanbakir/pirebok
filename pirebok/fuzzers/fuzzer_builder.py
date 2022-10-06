@@ -27,5 +27,9 @@ class FuzzerBuilder:
         self.fuzzer = self._get_fuzzer(name)
         return self
 
+    def threshold(self, threshold: float) -> FuzzerBuilder:
+        self.fuzzer.threshold = threshold  # type: ignore
+        return self
+
     def build(self) -> Fuzzer:
         return self.fuzzer

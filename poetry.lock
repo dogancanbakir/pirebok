@@ -402,7 +402,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "metamaska"
-version = "0.1.0"
+version = "0.2.0"
 description = "malevolent payload classifier"
 category = "main"
 optional = true
@@ -1109,7 +1109,7 @@ test = ["pytest", "black", "isort", "mypy", "flake8", "flake8-docstrings", "pyte
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<4.0"
-content-hash = "96902267f50ceca82851abba81e54fd297f72c4ec15c9a4a9c9d195b19c3b29f"
+content-hash = "0b512cbf5ea6cc1d38145b071a61ef52360f2541a294597005f406117bf54916"
 
 [metadata.files]
 attrs = [
@@ -1442,8 +1442,8 @@ mergedeep = [
     {file = "mergedeep-1.3.4.tar.gz", hash = "sha256:0096d52e9dad9939c3d975a774666af186eda617e6ca84df4c94dec30004f2a8"},
 ]
 metamaska = [
-    {file = "metamaska-0.1.0-py3-none-any.whl", hash = "sha256:7b81f72874e161c8009832623a3c4f9fcf4d944c911c2f083abbf1afe27eb500"},
-    {file = "metamaska-0.1.0.tar.gz", hash = "sha256:7334b4315c3a593cdf2a388bcd79eadec234e33cf607ed90734086d73039c7ad"},
+    {file = "metamaska-0.2.0-py3-none-any.whl", hash = "sha256:a48050c2305f3765546aaeea323a0dc943d77c62a62d9032b32c0f32779f19aa"},
+    {file = "metamaska-0.2.0.tar.gz", hash = "sha256:8982a428693b64a4abf12e5a6f06b2c88e029151bfb63ea7bf4a3e7c3493b72a"},
 ]
 mkdocs = [
     {file = "mkdocs-1.4.0-py3-none-any.whl", hash = "sha256:ce057e9992f017b8e1496b591b6c242cbd34c2d406e2f9af6a19b97dd6248faa"},
